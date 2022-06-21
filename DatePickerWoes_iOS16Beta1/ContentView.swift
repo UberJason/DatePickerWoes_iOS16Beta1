@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var date = Date()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
+        DatePicker("Date", selection: $date, displayedComponents: [.date])
     }
 }
 
